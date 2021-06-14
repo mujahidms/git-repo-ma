@@ -1,0 +1,25 @@
+[
+    {
+      "_comment": "I use private ECR repo for production environemnt, for demo pursose i used public ECR repo",
+      "_comment": "comment text goes here...",
+      "name": "ctm-container",
+      "image": "public.ecr.aws/a5q6a7j9/ctm-ecs-repo:latest",
+      "cpu": 10,
+      "memory": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": { 
+          "awslogs-group" : "/ecs/ctm-app-container",
+          "awslogs-region": "us-east-1"
+        }
+      }
+    }
+]

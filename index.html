@@ -1,0 +1,13 @@
+# a simple html which display DATE/Time and a "Hello World" message
+<html>
+   <head>
+   </head>
+          <body>
+             <h1 style="text-align:center;color:blue;">Hello World</h1>
+            <h2 style="text-align:center;color:green;"> 
+                  <p>Date/Time: <span id="datetime"></span></p><script>var dt = new Date(); 
+            document.getElementById("datetime").innerHTML=dt.toLocaleString();</script> </h2>
+          </body>
+</html>
+
+
